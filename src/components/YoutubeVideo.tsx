@@ -1,9 +1,15 @@
-export const YoutubeVideo = () => {
+
+type VideoProps = {
+  //je spécifie toutes les propriétés autorisées par le composant yT video
+  id: string
+}
+
+export const YoutubeVideo : React.FC<VideoProps> = ({id}) => {
   return (
     <iframe
     width='560'
     height='315'
-    src='https://www.youtube.com/embed/0BIaDVnYp2A'
+    src={`https://www.youtube.com/embed/${id}`}
     title='YouTube video player'
     allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
     allowFullScreen
